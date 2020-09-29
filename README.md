@@ -1,4 +1,4 @@
-# FetchRewards Android Assignment
+# FetchRewards Android App Assignment
  Files related to project: <br>
  MainActivity.java <br>
  MyAdapter.java <br>
