@@ -7,4 +7,4 @@
  activity_main.xml <br>
  item_list.xml <br>
  
-![Image of FetchRewards](https://imgur.com/Tp3rwsY.png)
+![Image of FetchRewards](https://imgur.com/qMJVVSU.png)
