@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 public int compare(JSONObject a, JSONObject b) {
                     String str1;
                     String str2;
-                    String str3 = new String();
-                    String str4 = new String();
+                    String str3 = "";
+                    String str4 = "";
 
                     try {
                         str1 = (String) a.get(KEY_NAME).toString();
@@ -62,11 +62,17 @@ public class MainActivity extends AppCompatActivity {
                             return number;
                         }
 
-                        str3 = (String) a.get(KEY_NAME2).toString();
-                        str4 = (String) b.get(KEY_NAME2).toString();
+                        str3 = (String) a.get(KEY_NAME2).toString().replace("Item", "").trim();
+                        str4 = (String) b.get(KEY_NAME2).toString().replace("Item", "").trim();
+
 
                     } catch(JSONException e) {
                         e.printStackTrace();
+                    }
+                    try {
+                        return Integer.valueOf(str3).compareTo(Integer.valueOf(str4));
+                    } catch (NumberFormatException n) {
+                        n.printStackTrace();
                     }
                     return str3.compareTo(str4);
                 }
